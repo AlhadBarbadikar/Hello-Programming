@@ -1,0 +1,33 @@
+This contains important notes made from the SAS Certification Prep Guide: Base Programming for SAS 9, 3rd edition
+
+General form of a SAS code:
+
+DATA output-SAS-dataset(DROP = variables|KEEP = variables) *DROP & KEEP are mutually exclusive;
+SET dataset <options>;
+BY variable(s);
+RUN;
+
+CHAPTER 1: BASE PROGRAMMING
+
+SAS programs can be used to access,manage,analyze & present your data. 
+
+SAMPLE PROGRAM: 
+data sasuser.admit2; 
+set sasuser.admit; 
+where age>39; 
+run; 
+proc print data=sasuser.admit2; 
+run;
+
+This contains 2 steps: PROC step & DATA step. A SAS program can consist of a SAS step, a PROC step or any number of SAS/PROC steps.
+
+General difference between DATA step & PROC step:
+
+DATA step is used to typically create or modify datasets. They can also be used to make custom designed reports.
+PROC steps invoke or call pre-written routines that enable to process & analyze the dataset.
+
+Characteristics of a SAS program:
+1. A SAS statement usually begins with a keyword
+2. A SAS statement always ends with a semicolon
+
+Layout for a SAS program:
